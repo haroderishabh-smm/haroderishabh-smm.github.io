@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rishabh Harode — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f2;--surface:#fff;--ink:#14110f;--muted:#6a645c;--line:#e8e2d8;--a1:#ff4d2e;--a2:#ff3d8b;--a3:#ffb23c;--accent:var(--a1);--accent-ink:#fff;--g:linear-gradient(110deg,var(--a1),var(--a2) 55%,var(--a3));
+--disp:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0c0b;--surface:#171513;--ink:#f6f2ec;--muted:#a39d93;--line:#2a2724;--accent:#ff6a4a;--accent-ink:#0d0c0b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d0c0b;--surface:#171513;--ink:#f6f2ec;--muted:#a39d93;--line:#2a2724;--accent:#ff6a4a;--accent-ink:#0d0c0b;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px;position:relative}
+a{color:inherit}
+h1,h2,h3,.disp{font-family:var(--disp)}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;background:var(--g);transform-origin:0 50%;transform:scaleX(0);z-index:61}
+.glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--a2) 22%,transparent),transparent 65%);pointer-events:none;z-index:0;will-change:transform}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px)}
+nav b{font-family:var(--disp);font-size:20px;letter-spacing:-.02em}
+nav div{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:flex-end;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none;transition:color .2s}nav a:hover{color:var(--accent)}
+#tt{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer;font:inherit;font-size:13px}
+.hero{position:relative;padding:64px 0 36px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.38;z-index:0;animation:fl 14s ease-in-out infinite}
+.b1{width:340px;height:340px;background:var(--a1);top:-40px;right:-60px}
+.b2{width:300px;height:300px;background:var(--a2);top:200px;left:-100px;animation-delay:-5s}
+.b3{width:240px;height:240px;background:var(--a3);bottom:-60px;right:25%;animation-delay:-9s}
+@keyframes fl{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.12)}66%{transform:translate(-30px,30px) scale(.92)}}
+.hero>*:not(.blob){position:relative;z-index:1}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid var(--line);background:var(--surface);padding:7px 14px;border-radius:999px}
+.tag i{width:8px;height:8px;border-radius:50%;background:#2ecc71;animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(46,204,113,.6)}100%{box-shadow:0 0 0 12px rgba(46,204,113,0)}}
+h1{font-size:clamp(52px,13vw,140px);line-height:.92;letter-spacing:-.05em;font-weight:800;margin:22px 0 10px}
+h1 span{display:inline-block;opacity:0;transform:translateY(60px) rotate(4deg);animation:up .9s cubic-bezier(.2,.9,.2,1) forwards}
+h1 span:nth-child(2){animation-delay:.12s}
+h1 .gr{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:up .9s .12s cubic-bezier(.2,.9,.2,1) forwards,shine 5s linear infinite}
+@keyframes up{to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:200% 0}}
+.say{font-family:var(--disp);font-size:clamp(24px,4.6vw,44px);font-weight:600;letter-spacing:-.03em;margin:0 0 18px}
+#rw{display:inline-block;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+#rw.sw{animation:wi .5s cubic-bezier(.2,.9,.2,1)}
+@keyframes wi{from{opacity:0;transform:translateY(.6em)}to{opacity:1;transform:none}}
+.lead{max-width:600px;font-size:18px;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--surface);transition:transform .2s,box-shadow .2s}
+.btn.p{background:var(--g);color:#fff;border-color:transparent;box-shadow:0 10px 30px -10px var(--a2)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:40px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px}
+.stat b{display:block;font-family:var(--disp);font-size:44px;letter-spacing:-.04em;line-height:1;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{font-size:13px;color:var(--muted)}
+.mq{overflow:hidden;border-block:1px solid var(--line);margin:34px 0 0;padding:14px 0;background:var(--surface);transform:rotate(-1.2deg)}
+.mt{display:flex;width:max-content;animation:mq 28s linear infinite}
+.mq:hover .mt{animation-play-state:paused}
+.mt span{font-family:var(--disp);font-size:26px;font-weight:700;letter-spacing:-.02em;padding:0 22px;white-space:nowrap}
+.mt span:nth-child(even){color:var(--accent)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:70px 0 6px;position:relative;z-index:1}
+h2{font-size:clamp(32px,6vw,56px);letter-spacing:-.04em;line-height:1;margin:0 0 8px;font-weight:800}
+.sub{color:var(--muted);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card,.pt{background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),color-mix(in srgb,var(--a2) 14%,transparent),transparent 60%),var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;transition:transform .3s cubic-bezier(.2,.9,.2,1),border-color .3s}
+.card:hover,.pt:hover{transform:translateY(-6px);border-color:var(--accent)}
+.card h3{margin:0 0 8px;font-size:21px;letter-spacing:-.02em}
+.card p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.card a.l{color:var(--accent);font-weight:600;font-size:14px;text-decoration:none}
+.card a.l:hover{text-decoration:underline}
+.plat{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.pt{text-align:left;cursor:pointer;color:var(--ink);font:inherit}
+.pt i{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--g);color:#fff;font-style:normal;font-family:var(--disp);font-weight:800;margin-bottom:14px;transition:transform .4s}
+.pt:hover i{transform:rotate(-10deg) scale(1.12)}
+.pt b{display:block;font-family:var(--disp);font-size:22px;letter-spacing:-.02em}.pt span{font-size:13px;color:var(--muted)}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.sk .card h3{font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:6px 14px;font-size:14px;transition:transform .2s,background .2s,color .2s}
+.chips span:hover{transform:translateY(-3px) scale(1.06);background:var(--g);color:#fff;border-color:transparent}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;counter-reset:s}
+.step{padding:20px;border-radius:22px;border:1px solid var(--line);background:var(--surface)}
+.step:before{counter-increment:s;content:"0" counter(s);display:block;font-family:var(--disp);font-size:56px;font-weight:800;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--accent);margin-bottom:8px}
+.step b{display:block;font-family:var(--disp);font-size:20px}.step span{font-size:14px;color:var(--muted)}
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.tl div{padding:0 0 22px 22px;position:relative}
+.tl div:before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:pulse2 2.4s infinite}
+@keyframes pulse2{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.tl b{display:block;font-family:var(--disp);font-size:18px}.tl small{color:var(--muted)}
+.contact{background:var(--g);color:#fff;border-radius:30px;padding:48px 24px;text-align:center}
+.contact h2{margin-bottom:10px}.contact .sub{color:rgba(255,255,255,.85)}
+.contact .btn{background:#fff;color:#14110f;border-color:#fff}
+footer{margin-top:60px;padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.9,.2,1) var(--d,0s),transform .8s cubic-bezier(.2,.9,.2,1) var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px;z-index:80}
+.ov.on{display:flex;animation:fi .25s}
+@keyframes fi{from{opacity:0}}
+.md{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:26px;width:100%;max-width:540px;max-height:80vh;overflow:auto;padding:26px;animation:pop .4s cubic-bezier(.2,.9,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(30px) scale(.94)}}
+.md header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.md h3{margin:0;font-size:24px;letter-spacing:-.03em}
+.md button{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:5px 14px;cursor:pointer;font:inherit;font-size:14px}
+.md a{display:flex;justify-content:space-between;gap:10px;padding:13px 16px;border:1px solid var(--line);border-radius:14px;margin-bottom:8px;text-decoration:none;word-break:break-all;opacity:0;animation:li .45s cubic-bezier(.2,.9,.2,1) forwards;transition:border-color .2s,transform .2s}
+@keyframes li{from{opacity:0;transform:translateX(-18px)}to{opacity:1;transform:none}}
+.md a:hover{border-color:var(--accent);color:var(--accent);transform:translateX(4px)}
+@media (prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}h1 span,.rv,.md a{opacity:1!important;transform:none!important}.glow{display:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div><div class="glow" id="gl"></div>
+<div class="wrap">
+<nav><b>RH.</b><div><a href="#work">Work</a><a href="#pages">Pages</a><a href="#podcast">Podcasts</a><a href="#skills">Skills</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Contact</a><button id="tt" type="button" aria-label="Toggle theme">Theme</button></div></nav>
+
+<header class="hero">
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<span class="tag"><i></i>Multimedia Producer · Social &amp; Video</span>
+<h1><span>Rishabh</span> <span class="gr">Harode</span></h1>
+<p class="say">I turn content into <span id="rw">Reels</span>.</p>
+<p class="lead">Long-form shows, podcasts and huge media libraries, taken from recording to editing to publishing and cut into clips people actually share, with AI workflows keeping it fast.</p>
+<div class="btns"><a class="btn p" href="#work">See my work</a><a class="btn" href="#contact">Get in touch</a></div>
+<div class="stats">
+<div class="stat rv"><b class="num" data-to="60" data-suf="+">60+</b><span>YouTube channels managed for Sony content distribution</span></div>
+<div class="stat rv" style="--d:.1s"><b class="num" data-to="200" data-suf="+">200+</b><span>Facebook pages managed</span></div>
+<div class="stat rv" style="--d:.2s"><b class="num" data-to="50" data-pre="$" data-suf="K+">$50K+</b><span>revenue from Facebook pages in 4–5 months</span></div>
+<div class="stat rv" style="--d:.3s"><b class="num" data-to="12">12</b><span>social managers and editors led</span></div>
+</div>
+</header>
+</div>
+
+<div class="mq" aria-hidden="true"><div class="mt" id="mt2"></div></div>
+
+<div class="wrap">
+<section id="work">
+<h2 class="rv">Selected work</h2>
+<p class="sub rv">A mix of distribution, strategy, content and automation.</p>
+<div class="grid">
+<div class="card rv"><h3>Sony content on YouTube</h3><p>Publishing, metadata, thumbnails and analytics across 60+ channels, including shows like Kapil Sharma, CID and KBC.</p></div>
+<div class="card rv" style="--d:.08s"><h3>Sarcasm: Instagram strategy</h3><p>Content strategy for a large sarcasm-and-humour page.</p><a class="l" href="https://www.instagram.com/sarcastic_us/" target="_blank" rel="noopener">View page →</a></div>
+<div class="card rv" style="--d:.16s"><h3>Brand content: Balaji Wafers</h3><p>Written content for the brand’s Instagram presence.</p><a class="l" href="https://www.instagram.com/balajiwafers/" target="_blank" rel="noopener">View page →</a></div>
+<div class="card rv"><h3>Brand content: Ching’s Secret</h3><p>Written content for the brand, alongside work for Zepto.</p><a class="l" href="https://www.instagram.com/chingssecret/" target="_blank" rel="noopener">View page →</a></div>
+<div class="card rv" style="--d:.08s"><h3>PR and publicity</h3><p>PR for Sony, KBC, JioHotstar and 10+ more, plus web series, movies, cricketers and brands.</p></div>
+<div class="card rv" style="--d:.16s"><h3>AI automation</h3><p>Content automation with a Grok bot, plus internal tools and video-editing automation built with Codex, Claude Code and ChatGPT.</p></div>
+</div>
+</section>
+
+<section id="pages">
+<h2 class="rv">Pages I manage</h2>
+<p class="sub rv">Pick a platform to see the pages and jump straight to them.</p>
+<div class="plat">
+<button class="pt rv" type="button" data-p="youtube"><i>YT</i><b>YouTube</b><span data-c="youtube"></span></button>
+<button class="pt rv" style="--d:.08s" type="button" data-p="facebook"><i>f</i><b>Facebook</b><span data-c="facebook"></span></button>
+<button class="pt rv" style="--d:.16s" type="button" data-p="instagram"><i>IG</i><b>Instagram</b><span data-c="instagram"></span></button>
+<button class="pt rv" style="--d:.24s" type="button" data-p="x"><i>X</i><b>X</b><span data-c="x"></span></button>
+</div>
+</section>
+
+<section id="podcast">
+<h2 class="rv">Podcast production</h2>
+<p class="sub rv">Shows I produce from pre-production to post-production.</p>
+<div class="grid">
+<div class="card rv"><h3>Diffr Community</h3><p>Podcast and long-form channel on YouTube.</p><a class="l" href="https://www.youtube.com/@diffrcommunity" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+<div class="card rv" style="--d:.1s"><h3>The Ek Theek Content</h3><p>Podcast and long-form channel on YouTube.</p><a class="l" href="https://www.youtube.com/@theektheekcontent" target="_blank" rel="noopener">Watch on YouTube →</a></div>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="rv">Skills</h2>
+<p class="sub rv">What I bring to a production and content team.</p>
+<div class="sk">
+<div class="card rv"><h3>Production &amp; editing</h3><div class="chips"><span>Video editing</span><span>Podcast production</span><span>Premiere Pro</span><span>Audio clean-up</span><span>Captions &amp; transcripts</span><span>Colour correction</span><span>Motion graphics</span><span>Live &amp; event recording</span></div></div>
+<div class="card rv" style="--d:.08s"><h3>Distribution &amp; growth</h3><div class="chips"><span>Content distribution</span><span>YouTube management</span><span>Virality</span><span>Short-form &amp; reels</span><span>SEO</span><span>Thumbnails</span><span>Analytics</span><span>Trend research</span></div></div>
+<div class="card rv" style="--d:.16s"><h3>Marketing &amp; writing</h3><div class="chips"><span>Social media marketing</span><span>Copywriting</span><span>Content strategy</span><span>Paid ads (Meta, X)</span><span>Influencer marketing</span><span>PR</span><span>Community management</span><span>Campaign management</span></div></div>
+<div class="card rv"><h3>AI &amp; automation</h3><div class="chips"><span>AI workflows</span><span>AI video editing</span><span>AI designing</span><span>Automations</span><span>Vibe coding internal tools</span><span>Grok bot</span><span>Codex</span><span>Claude Code</span></div></div>
+<div class="card rv" style="--d:.08s"><h3>Leadership</h3><div class="chips"><span>Team management</span><span>Leading editors &amp; managers</span><span>Briefing freelancers</span><span>Templates &amp; checklists</span><span>Publishing calendars</span></div></div>
+</div>
+</section>
+
+<section id="process">
+<h2 class="rv">How I produce &amp; make content viral</h2>
+<p class="sub rv">From the first shoot to a clip that travels.</p>
+<div class="steps">
+<div class="step rv"><b>Shoot</b><span>Content shot to a virality script and social media standards.</span></div>
+<div class="step rv" style="--d:.1s"><b>Edit with AI</b><span>AI-assisted edit built around the script, on high-potential topics, with a teaser to hook viewers.</span></div>
+<div class="step rv" style="--d:.2s"><b>Publish</b><span>The full episode goes live on YouTube.</span></div>
+<div class="step rv" style="--d:.3s"><b>Repurpose</b><span>Best clips cut into Shorts and Reels, edited in different ways and posted across multiple Instagram pages to gain traction and go viral.</span></div>
+</div>
+</section>
+
+<section id="about">
+<h2 class="rv">About</h2>
+<p class="rv" style="max-width:780px;font-size:18px;margin:0 0 14px">I’m a Social Media Marketing, podcast production and content creation professional with 3+ years of experience, passionate about podcast production, content virality and AI-powered content innovation. I specialize in transforming ideas and conversations into engaging, high-performing content that captures attention, drives massive reach and builds audiences. By combining creative storytelling, AI-driven workflows, fast execution and team leadership, I turn content into measurable business impact through virality, audience growth and revenue generation.</p>
+<p class="sub rv">Based in Indore / Betul, India. BCA, Sarvepalli Radhakrishnan University, Bhopal (2020–2023).</p>
+<div class="tl rv">
+<div><b>Social Media Manager, Creativefuel</b><small>Dec 2025 – Present · Sony content on 60+ YouTube channels, 200+ Facebook pages, X ads, AI-assisted editing workflows, leading 12 managers and editors</small></div>
+<div><b>Social Media Marketing Executive, Viha Tech Software Solutions, Indore</b><small>Jun 2024 – Dec 2025 · podcast production from pre-production to publishing, YouTube and Instagram growth, reels and Shorts, five-person team</small></div>
+<div><b>Social Media Manager &amp; Ad Manager, Anika Media, Bhopal</b><small>Apr 2023 – Jun 2024 · multimedia content and product shoots, paid Meta campaigns, influencer campaigns, on-ground political campaigns</small></div>
+</div>
+<p class="sub rv" style="margin-top:24px">Tools</p>
+<div class="chips rv"><span>Premiere Pro</span><span>AI editing workflows</span><span>Meta Ads</span><span>X Ads</span><span>Codex</span><span>Claude Code</span><span>Grok bot</span><span>Muse</span><span>Meta Business Suite</span></div>
+</section>
+
+<section id="contact">
+<div class="contact rv">
+<h2>Let’s make something good</h2>
+<p class="sub">Open to multimedia producer and content roles.</p>
+<div class="btns" style="justify-content:center">
+<a class="btn" href="mailto:haroderishabh93@gmail.com">Email me</a>
+<a class="btn" href="tel:+919981287416">Call 99812 87416</a>
+<a class="btn" href="https://www.linkedin.com/in/rishabh-harode-486859241/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+</div>
+</section>
+<footer>© Rishabh Harode</footer>
+</div>
+
+<div class="ov" id="ov"><div class="md" role="dialog" aria-modal="true" aria-labelledby="mt"><header><h3 id="mt"></h3><button type="button" id="mc">Close</button></header><div id="ml"></div></div></div>
+<script>
+(function(){
+var R=matchMedia("(prefers-reduced-motion: reduce)").matches,root=document.documentElement;
+document.getElementById("tt").addEventListener("click",function(){var d=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);root.setAttribute("data-theme",d?"light":"dark")});
+/* marquee */
+var M=["YouTube","Facebook","Instagram","X","Podcasts","Reels","Shorts","Premiere Pro","AI Workflows","Virality","Thumbnails","SEO"],h="";
+for(var r=0;r<2;r++)M.forEach(function(w){h+="<span>"+w+"</span><span>✦</span>"});
+document.getElementById("mt2").innerHTML=h;
+/* rotating word */
+var W=["Reels","Shorts","Podcasts","Viral moments","Reach"],wi=0,rw=document.getElementById("rw");
+if(!R)setInterval(function(){wi=(wi+1)%W.length;rw.classList.remove("sw");void rw.offsetWidth;rw.textContent=W[wi];rw.classList.add("sw")},2200);
+/* reveal + count up */
+function count(el){var to=+el.dataset.to,p=el.dataset.pre||"",s=el.dataset.suf||"",t0=null;function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/1500,1),e=1-Math.pow(1-k,3);el.textContent=p+Math.round(to*e)+s;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
+var els=[].slice.call(document.querySelectorAll(".rv"));
+if(R||!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");var n=e.target.querySelector(".num");if(n)count(n);io.unobserve(e.target)}})},{threshold:.15});els.forEach(function(e){io.observe(e)})}
+/* scroll bar */
+var bar=document.getElementById("bar");
+addEventListener("scroll",function(){var m=root.scrollHeight-innerHeight;bar.style.transform="scaleX("+(m>0?scrollY/m:0)+")"},{passive:true});
+/* cursor glow, card spotlight, magnetic buttons */
+var gl=document.getElementById("gl");
+if(matchMedia("(pointer:fine)").matches&&!R){
+addEventListener("pointermove",function(e){gl.style.transform="translate("+e.clientX+"px,"+e.clientY+"px)";var c=e.target.closest&&e.target.closest(".card,.pt");if(c){var b=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-b.left)+"px");c.style.setProperty("--my",(e.clientY-b.top)+"px")}});
+document.querySelectorAll(".btn").forEach(function(b){b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect();b.style.transform="translate("+((e.clientX-r.left-r.width/2)*.2)+"px,"+((e.clientY-r.top-r.height/2)*.3)+"px)"});b.addEventListener("pointerleave",function(){b.style.transform=""})});
+}else{gl.style.display="none"}
+/* platform windows */
+var D={
+youtube:["@HasleyIndiachannel","@HasiKiGufa","@missmalinivideos","@diffrcommunity","@ThePsynide","@theektheekcontent"].map(function(h){return[h,"https://www.youtube.com/"+h]}),
+instagram:["sarcastic_us","justgabbarthings","ind","hinduism","diffrcommunity","balajiwafers","chingssecret","ridewithzepto","xavierunclecoool"].map(function(h){return["@"+h,"https://www.instagram.com/"+h+"/"]}),
+facebook:[["missmaliniblog","https://www.facebook.com/missmaliniblog"],["ramayantvofficial","https://www.facebook.com/ramayantvofficial"],["DastakkTV","https://www.facebook.com/DastakkTV/"],["Officialdigitalcomedy","https://www.facebook.com/Officialdigitalcomedy/"],["IshqDiaries1","https://www.facebook.com/IshqDiaries1/reels/"],["FamilyShoww","https://www.facebook.com/FamilyShoww/"],["tashanentertainmentofficial","https://www.facebook.com/tashanentertainmentofficial"],["Page 100083454826987","https://www.facebook.com/profile.php?id=100083454826987"],["thefilmycult","https://www.facebook.com/thefilmycult"],["entertainmentKSS","https://www.facebook.com/entertainmentKSS/"],["kbmastermindofficial","https://www.facebook.com/kbmastermindofficial"]],
+x:[["@rapidrouter","https://x.com/rapidrouter"]]};
+var T={youtube:"YouTube channels",instagram:"Instagram pages",facebook:"Facebook pages",x:"X accounts"};
+var ov=document.getElementById("ov"),ml=document.getElementById("ml"),mt=document.getElementById("mt");
+for(var k in D){var s=document.querySelector('[data-c="'+k+'"]');if(s)s.textContent=D[k].length+(D[k].length===1?" page":" pages")+" · view all"}
+function open(k){mt.textContent=T[k];ml.textContent="";D[k].forEach(function(p,i){var a=document.createElement("a");a.href=p[1];a.target="_blank";a.rel="noopener";a.style.animationDelay=(.05+i*.045)+"s";var n=document.createElement("span");n.textContent=p[0];var g=document.createElement("span");g.textContent="Open →";a.appendChild(n);a.appendChild(g);ml.appendChild(a)});ov.classList.add("on")}
+function close(){ov.classList.remove("on")}
+document.querySelectorAll(".pt").forEach(function(b){b.addEventListener("click",function(){open(b.getAttribute("data-p"))})});
+document.getElementById("mc").addEventListener("click",close);
+ov.addEventListener("click",function(e){if(e.target===ov)close()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+})();
+</script>
+</body>
+</html>
